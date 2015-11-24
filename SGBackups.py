@@ -1,3 +1,4 @@
+import ConfigParser
 import ftputil
 import os
 import re
@@ -11,7 +12,8 @@ backup_pattern = re.compile('wp\.(.*)\.(.*)\.tar\.gz')
 
 
 def load_config():
-    config = ConfigParser.configParser()
+    global FTP_ADDR, FTP_USER, FTP_PASS
+    config = ConfigParser.ConfigParser()
     config.read("settings.conf")
     FTP_ADDR = config.get('ftp', 'ftp_addr')
     FTP_USER = config.get('ftp', 'ftp_user')
