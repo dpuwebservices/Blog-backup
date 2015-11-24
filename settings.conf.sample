@@ -1,0 +1,7 @@
+[ftp]
+# The ftp address to use
+ftp_addr=
+# The ftp user to use
+ftp_user=
+# The ftp password to use
+ftp_pass=
